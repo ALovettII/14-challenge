@@ -43,7 +43,7 @@ At `DateOffset`= 7 months, there was a 1% increase to precision, recall, and F1 
 
 By increasing the DateOffset above 7 months, the results were decreasingly productive, showing reduced accuracy and return.
 
-#### Tuning the SMA: Tuning the Algorithm by Adjusting the SMA Input Features
+#### Tuning the Algorithm by Adjusting the SMA Input Features
 *Answer the following question: What impact resulted from increasing or decreasing either or both of the SMA windows?*
 
 After resetting the `DateOffset` = 3, I tested various `long-window` (LW) and `short-window` (SW) combinations.
@@ -77,6 +77,14 @@ These were much better results than the baseline trading algorithm. The tuned al
 
 #### Backtest the new model to evaluate its performance
 *Answer the following questions: Did this new model pelrorm better or worse than the provided baseline model? Did this new model perform better or worse than your tuned trading algorithm?*
+
+The Logistic regression model performed worse with respect to both the baseline model and the tuned trading algrithm. While the return was the same (r=1.617), the accuracy decreased significantly (A=.52) compared to the baseline (A=.55). Subsequently, it's accuracy was 4% below the tuned trading algorithm.
+
+However, a notable postive of the new model was it's balanced prediction of each class. Where the SVM predicted the `1` class significantly more accurately, the Logistic Regression model predicted both classes with a closer balance between the two, as seen in the report below.
+
+![Logistic Regression Report](https://github.com/ALovettII/14-challenge/blob/main/Resources/Images/LR-Report.png)
+![Logistic Regression Cumulative Return Plot](https://github.com/ALovettII/14-challenge/blob/main/Resources/Images/LR-Plot.png)
+
 #### Summary of Model Performance
 | Model Name | Accuracy | Cumulative Return |
 | ---------- | -------- | ----------------- |
@@ -84,7 +92,7 @@ These were much better results than the baseline trading algorithm. The tuned al
 | Training Tuned SVM | 0.56 | 1.850 | 
 | SMA Tuned SVM | .55 | 1.644 | 
 | Optimal Tuned SVM | .56 | 1.856 | 
-| RandomForest | 
+| Logistic Regression | .52 | 1.617 | 
 
 
 ## Contributors
