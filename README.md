@@ -67,12 +67,23 @@ Yielding the following results:
 * Cumulative Return = 1.856
 * Accuracy = .56
 
+These were much better results than the baseline trading algorithm. The tuned algrithm was 14.8% greater than the baseline return of 1.617, and increase of 23.9% overall. The overall accuracy of the model increased by 1% to 56% which is relatively small but still positive.
+
+![Baseline Classification Report](https://github.com/ALovettII/14-challenge/blob/main/Resources/Images/Baseline_Report.png)
+![Tuned Classification Report](https://github.com/ALovettII/14-challenge/blob/main/Resources/Images/Tune_Report.png)
+![Baseline Cumulative Return Plot](https://github.com/ALovettII/14-challenge/blob/main/Resources/Images/Baseline_Plot.png)
+![Tuned Cumulative Return Plot](https://github.com/ALovettII/14-challenge/blob/main/Resources/Images/Tuned_Plot.png)
+
+
+#### Backtest the new model to evaluate its performance
+
+#### Summary of Model Performance
 | Model Name | Accuracy | Cumulative Return |
 | ---------- | -------- | ----------------- |
 | Baseline SVM | 0.55 | 1.617 | 
 | Training Tuned SVM | 0.56 | 1.850 | 
 | SMA Tuned SVM | .55 | 1.644 | 
-| Optimal Tuned SVM | 
+| Optimal Tuned SVM | .56 | 1.856 | 
 | RandomForest | 
 
 
