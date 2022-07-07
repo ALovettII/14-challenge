@@ -76,7 +76,7 @@ These were much better results than the baseline trading algorithm. The tuned al
 
 
 #### Backtest the new model to evaluate its performance
-
+*Answer the following questions: Did this new model pelrorm better or worse than the provided baseline model? Did this new model perform better or worse than your tuned trading algorithm?*
 #### Summary of Model Performance
 | Model Name | Accuracy | Cumulative Return |
 | ---------- | -------- | ----------------- |
