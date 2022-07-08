@@ -91,6 +91,7 @@ However, a notable postive of the new model was it's balanced prediction of each
 #### Logistic Regression Cumulative Return Plot
 ![Logistic Regression Cumulative Return Plot](https://github.com/ALovettII/14-challenge/blob/main/Resources/Images/LR-Plot.png)
 
+
 #### Summary of Model Performance
 | Model Name | Accuracy | Cumulative Return |
 | ---------- | -------- | ----------------- |
