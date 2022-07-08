@@ -34,7 +34,7 @@ To modify this code for your own use:
 
 ## Evaluation Report
 
-#### Tuning the Algorithm by Adjusting the Size of the Training Dataset
+### Tuning the Algorithm by Adjusting the Size of the Training Dataset
 *"Answer the following question: What impact resulted from increasing or decreasing the training window?"* 
 
 To seek optimal strategy results, I tested both shortened and extended training windows. Shortening the training window had no positive effect in return or acccuracy. However, by increasing the training window one month at a time, I was able to see positive results.
@@ -43,7 +43,7 @@ At `DateOffset`= 7 months, there was a 1% increase to precision, recall, and F1 
 
 By increasing the DateOffset above 7 months, the results were decreasingly productive, showing reduced accuracy and return.
 
-#### Tuning the Algorithm by Adjusting the SMA Input Features
+### Tuning the Algorithm by Adjusting the SMA Input Features
 *Answer the following question: What impact resulted from increasing or decreasing either or both of the SMA windows?*
 
 After resetting the `DateOffset` = 3, I tested various `long-window` (LW) and `short-window` (SW) combinations.
@@ -54,7 +54,7 @@ First, I attempted to increase and decresase both the LW and the SW independentl
 
 However after testing the `LW` and `SW` combinations together, the only postive yield came at `LW`=101 with `SW`=4. This changed had no change to the model accuracy (A=.55).
  
-#### Choose the Set of Parameters That Best Improved the Trading Algorithm Returns
+### Choose the Set of Parameters That Best Improved the Trading Algorithm Returns
 Following the same methodology applied to the tuning of the trading algorithm's SMA and training datatset, I tested various combinations of `DateOffset`, `long-window`, and `short-window`.
 
 This experimentation led to my final version of the tuned trading algorithm with the following parameters:
@@ -69,20 +69,26 @@ Yielding the following results:
 
 These were much better results than the baseline trading algorithm. The tuned algrithm was 14.8% greater than the baseline return of 1.617, and increase of 23.9% overall. The overall accuracy of the model increased by 1% to 56% which is relatively small but still positive.
 
+#### Baseline Classsification Report
 ![Baseline Classification Report](https://github.com/ALovettII/14-challenge/blob/main/Resources/Images/Baseline_Report.png)
+#### Tuned Classsification Report
 ![Tuned Classification Report](https://github.com/ALovettII/14-challenge/blob/main/Resources/Images/Tune_Report.png)
+#### Baseline Cumulative Return Plot
 ![Baseline Cumulative Return Plot](https://github.com/ALovettII/14-challenge/blob/main/Resources/Images/Baseline_Plot.png)
+#### Tuned Cumulative Return Plot
 ![Tuned Cumulative Return Plot](https://github.com/ALovettII/14-challenge/blob/main/Resources/Images/Tuned_Plot.png)
 
 
-#### Backtest the new model to evaluate its performance
+### Backtest the new model to evaluate its performance
 *Answer the following questions: Did this new model pelrorm better or worse than the provided baseline model? Did this new model perform better or worse than your tuned trading algorithm?*
 
 The Logistic regression model performed worse with respect to both the baseline model and the tuned trading algrithm. While the return was the same (r=1.617), the accuracy decreased significantly (A=.52) compared to the baseline (A=.55). Subsequently, it's accuracy was 4% below the tuned trading algorithm.
 
 However, a notable postive of the new model was it's balanced prediction of each class. Where the SVM predicted the `1` class significantly more accurately, the Logistic Regression model predicted both classes with a closer balance between the two, as seen in the report below.
 
+#### Logistic Regression Classsification Report
 ![Logistic Regression Report](https://github.com/ALovettII/14-challenge/blob/main/Resources/Images/LR-Report.png)
+#### Logistic Regression Cumulative Return Plot
 ![Logistic Regression Cumulative Return Plot](https://github.com/ALovettII/14-challenge/blob/main/Resources/Images/LR-Plot.png)
 
 #### Summary of Model Performance
